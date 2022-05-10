@@ -1,5 +1,7 @@
 create database Aula02Imovel
 
+use Aula02Imovel
+
 create table Vendedor(
 Id_vendedor int primary key,
 Nome varchar(30) not null,
