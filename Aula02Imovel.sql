@@ -1,4 +1,4 @@
-create database Aula02Imovel
+--create database Aula02Imovel
 
 use Aula02Imovel
 
@@ -27,13 +27,13 @@ descricao varchar(30)
 create table Cidade(
 Id_cidade int primary key,
 descricao varchar(30),
-siglaEstado char(2) foreign key references Estado(Sigla)
+Sigla char(2) foreign key references Estado(Sigla)
 )
 
 create table Bairro(
 Id_bairro int primary key,
 descricao varchar(30),
-idCidade int foreign key references Cidade(Id_cidade)
+Id_cidade int foreign key references Cidade(Id_cidade)
 )
 
 create table Imovel(
@@ -44,7 +44,7 @@ idBairro int foreign key references Bairro(Id_Bairro)
 )
 
 create table Oferta(
-idComprador int foreign key references Comprador(Id_comprador),
-idImovel int foreign key references Imovel(Id_imovel),
+Id_comprador int foreign key references Comprador(Id_comprador),
+Id_imovel int foreign key references Imovel(Id_imovel),
 Data date,
 )

@@ -1,4 +1,4 @@
-create database Aula02Carro
+--create database Aula02Carro
 
 use Aula02Carro
 
@@ -15,17 +15,17 @@ QTDE int
 
 create table Veiculo(
 Id_veiculo int primary key,
-idCliente int foreign key references Cliente(Id_cliente)
+Id_cliente int foreign key references Cliente(Id_cliente)
 )
 
 create table Pedido(
 Id_pedido int primary key,
-idCliente int foreign key references Cliente(Id_cliente),
+Id_cliente int foreign key references Cliente(Id_cliente),
 Data date
 )
 
 create table Detalhe(
-idPedido int foreign key references Pedido(Id_pedido),
-idProduto int foreign key references Produto(Id_produto),
+Id_pedido int foreign key references Pedido(Id_pedido),
+Id_produto int foreign key references Produto(Id_produto),
 QTDE int
 )

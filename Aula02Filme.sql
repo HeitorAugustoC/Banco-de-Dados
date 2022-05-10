@@ -1,6 +1,6 @@
-create database Aula02Filme
+--create database Aula02Filme
 
-use Aula02Filme
+use Aula02Carro
 
 create table Genero(
 Id_genero int primary key,
@@ -16,8 +16,8 @@ create table Filme(
 Id_filme int primary key,
 nome_filme varchar(20),
 sinopse varchar(100),
-idCat int foreign key references Categoria(Id_categoria),
-idGen int foreign key references Genero(Id_genero)
+Id_categoria int foreign key references Categoria(Id_categoria),
+Id_genero int foreign key references Genero(Id_genero)
 )
 
 create table Cliente(
@@ -27,8 +27,8 @@ Endereco varchar(100)
 )
 
 create table locacao(
-idFilme int foreign key references Filme(Id_filme),
-idCliente int foreign key references Cliente(Id_Cliente),
+Id_filme int foreign key references Filme(Id_filme),
+Id_Cliente int foreign key references Cliente(Id_Cliente),
 data_locacao date not null,
 data_devolucao date not null
 )
