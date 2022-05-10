@@ -1,5 +1,7 @@
 create database Aula02Carro
 
+use Aula02Carro
+
 create table Cliente(
 Id_cliente int primary key,
 Nome varchar(30)
