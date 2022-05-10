@@ -1,6 +1,6 @@
 create database Aula02Filme
 
-use master
+use Aula02Filme
 
 create table Genero(
 Id_genero int primary key,
